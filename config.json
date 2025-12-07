@@ -1,0 +1,25 @@
+{
+  "aws": {
+    "region": "us-east-1",
+    "s3_bucket": "my-app-logs-bucket",
+    "log_prefix": "logs/",
+    "auto_scaling_group": "my-app-asg"
+  },
+  "thresholds": {
+    "cpu_high": 70,
+    "cpu_low": 20,
+    "error_rate": 5,
+    "slow_response_rate": 10,
+    "slow_response_ms": 1000
+  },
+  "monitoring": {
+    "cloudwatch_period_minutes": 5,
+    "max_log_files": 10,
+    "enable_auto_scaling": true
+  },
+  "scaling": {
+    "scale_up_increment": 1,
+    "scale_down_increment": 1,
+    "cooldown_seconds": 300
+  }
+}
